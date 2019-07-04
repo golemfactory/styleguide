@@ -2009,9 +2009,11 @@ import tensorflow as tf
 from book.genres import scifi
 from myproject.backend.hgwells import time_machine
 from myproject.backend.state_machine import main_loop
-from otherproject.ai import body
-from otherproject.ai import mind
-from otherproject.ai import soul
+from otherproject.ai import (
+    body,
+    mind,
+    soul,
+)
 
 # Older style code may have these imports down here instead:
 #from myproject.backend.hgwells import time_machine
