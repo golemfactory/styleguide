@@ -954,8 +954,7 @@ Okay to use.
 <a id="function-and-method-decorators"></a>
 ### 2.17 Function and Method Decorators
 
-Use decorators judiciously when there is a clear advantage. Avoid
-`@staticmethod` and limit use of `@classmethod`.
+Use decorators judiciously when there is a clear advantage.
 
 <a id="s2.17.1-definition"></a>
 #### 2.17.1 Definition
@@ -1014,12 +1013,6 @@ guaranteed to succeed in all cases.
 
 Decorators are a special case of "top level code" - see [main](#s3.17-main) for
 more discussion.
-
-Never use `@staticmethod` unless forced to in order to integrate with an API
-defined in an existing library. Write a module level function instead.
-
-Use `@classmethod` only when writing a named constructor or a class-specific
-routine that modifies necessary global state such as a process-wide cache.
 
 <a id="s2.18-threading"></a>
 <a id="threading"></a>
