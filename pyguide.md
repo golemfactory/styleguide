@@ -2349,8 +2349,9 @@ too long to be on a single line (try to keep sub-types unbroken).
 ```python
 def my_method(
         self,
-        first_var: Tuple[List[MyLongType1],
-                         List[MyLongType2]],
+        first_var: Tuple[
+            List[MyLongType1],
+            List[MyLongType2]],
         second_var: List[Dict[
             MyLongType3, MyLongType4]],
 ) -> None:
