@@ -28,7 +28,8 @@ auto-formatter to avoid arguing over formatting.
 <a id="lint"></a>
 ### 2.1 Lint
 
-Run `pylint`, `mypy` and `flake8` over your code.
+Run `pylint`, `mypy` and `flake8` over your code. You can not merge your 
+Pull Request when these checks do not pass.
 
 <a id="s2.1.1-definition"></a>
 #### 2.1.1 Definition
@@ -39,7 +40,7 @@ languages like C and C++. Because of the dynamic nature of Python, some
 warnings may be incorrect; however, spurious warnings should be fairly
 infrequent.
 
-`mypy` is an optional static type checker
+`mypy` is a static type checker.
 
 `flake8` is a style guide enforcer, to help apply the rules from this guide
 
