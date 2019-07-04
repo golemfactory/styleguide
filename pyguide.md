@@ -2303,10 +2303,12 @@ Try to follow the existing [indentation](#indentation) rules.
 After annotating, many function signatures will become "one parameter per line".
 
 ```python
-def my_method(self,
-              first_var: int,
-              second_var: Foo,
-              third_var: Optional[Bar]) -> int:
+def my_method(
+        self,
+        first_var: int,
+        second_var: Foo,
+        third_var: Optional[Bar],
+) -> int:
   ...
 ```
 
@@ -2320,23 +2322,13 @@ def my_method(self, first_var: int) -> int:
 ```
 
 If the combination of the function name, the last parameter, and the return type
-is too long, indent by 4 in a new line.
+is too long, indent by 8 in a new line.
 
 ```python
 def my_method(
-    self, first_var: int) -> Tuple[MyLongType1, MyLongType1]:
-  ...
-```
-
-When the return type does not fit on the same line as the last parameter, the
-preferred way is to indent the parameters by 4 on a new line and align the
-closing parenthesis with the def.
-
-```python
-Yes:
-def my_method(
-    self, **kw_args: Optional[MyLongType]
-) -> Dict[OtherLongType, MyLongType]:
+        self,
+        first_var: int,
+) -> Tuple[MyLongType1, MyLongType1]:
   ...
 ```
 
@@ -2356,11 +2348,12 @@ too long to be on a single line (try to keep sub-types unbroken).
 
 ```python
 def my_method(
-    self,
-    first_var: Tuple[List[MyLongType1],
-                     List[MyLongType2]],
-    second_var: List[Dict[
-        MyLongType3, MyLongType4]]) -> None:
+        self,
+        first_var: Tuple[List[MyLongType1],
+                         List[MyLongType2]],
+        second_var: List[Dict[
+            MyLongType3, MyLongType4]],
+) -> None:
   ...
 ```
 
@@ -2371,8 +2364,8 @@ colon and indent by 4.
 ```python
 Yes:
 def my_function(
-    long_variable_name:
-        long_module_name.LongTypeName,
+        long_variable_name:
+            long_module_name.LongTypeName,
 ) -> None:
   ...
 ```
