@@ -28,7 +28,7 @@ auto-formatter to avoid arguing over formatting.
 <a id="lint"></a>
 ### 2.1 Lint
 
-Run `pylint` over your code.
+Run `pylint`, `mypy` and `flake8` over your code.
 
 <a id="s2.1.1-definition"></a>
 #### 2.1.1 Definition
@@ -38,6 +38,10 @@ code. It finds problems that are typically caught by a compiler for less dynamic
 languages like C and C++. Because of the dynamic nature of Python, some
 warnings may be incorrect; however, spurious warnings should be fairly
 infrequent.
+
+`mypy` is an optional static type checker
+
+`flake8` is a style guide enforcer, to help apply the rules from this guide
 
 <a id="s2.1.2-pros"></a>
 #### 2.1.2 Pros
@@ -252,7 +256,7 @@ Exceptions must follow certain conditions:
     occurred. If an exception is desired in the latter cases, use a raise
     statement. For example:
 
-    
+
     ```python
     Yes:
       def connect_to_next_port(self, minimum):
@@ -313,7 +317,7 @@ Exceptions must follow certain conditions:
 
 -   When capturing an exception, use `as` rather than a comma. For example:
 
-    
+
     ```python
     try:
       raise Error()
@@ -1956,7 +1960,7 @@ grouped from most generic to least generic:
 2.  [third-party](https://pypi.org/)
     module or package imports. For example:
 
-    
+
     ```python
     import tensorflow as tf
     ```
@@ -1964,7 +1968,7 @@ grouped from most generic to least generic:
 3.  Code repository
     sub-package imports. For example:
 
-    
+
     ```python
     from otherproject.ai import mind
     ```
@@ -1973,7 +1977,7 @@ grouped from most generic to least generic:
     top level
     sub-package as this file. For example:
 
-    
+
     ```python
     from myproject.backend.hgwells import time_machine
     ```
@@ -1983,7 +1987,7 @@ grouped from most generic to least generic:
     treat application-specific sub-package imports the same as other
     sub-package imports.
 
-    
+
 Within each grouping, imports should be sorted lexicographically, ignoring case,
 according to each module's full package path. Code may optionally place a blank
 line between import sections.
@@ -2728,5 +2732,3 @@ it. We present global style rules here so people know the vocabulary, but local
 style is also important. If code you add to a file looks drastically different
 from the existing code around it, it throws readers out of their rhythm when
 they go to read it. Avoid this.
-
-
