@@ -1214,9 +1214,6 @@ Exceptions:
     inconvenient to split across lines such as URLs or pathnames.
 -   Pylint disable comments. (e.g.: `# pylint: disable=invalid-name`)
 
-Do not use backslash line continuation except for `with` statements requiring
-three or more context managers.
-
 Make use of Python's [implicit line joining inside parentheses, brackets and
 braces](http://docs.python.org/reference/lexical_analysis.html#implicit-line-joining).
 If necessary, you can add an extra pair of parentheses around an expression.
