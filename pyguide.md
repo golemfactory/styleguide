@@ -1491,17 +1491,9 @@ followed by the rest of the docstring starting at the same cursor position as
 the first quote of the first line. There are more formatting guidelines for
 docstrings below.
 
-<a id="s3.8.2-comments-in-modules"></a>
-<a id="comments-in-modules"></a>
-#### 3.8.2 Modules
-
-Every file should contain license boilerplate. Choose the appropriate
-boilerplate for the license used by the project (for example, Apache 2.0, BSD,
-LGPL, GPL)
-
-<a id="s3.8.3-functions-and-methods"></a>
+<a id="s3.8.2-functions-and-methods"></a>
 <a id="functions-and-methods"></a>
-#### 3.8.3 Functions and Methods
+#### 3.8.2 Functions and Methods
 
 In this section, "function" means a method, function, or generator.
 
@@ -1586,9 +1578,9 @@ def fetch_bigtable_rows(big_table, keys, other_silly_variable=None):
     """
 ```
 
-<a id="s3.8.4-comments-in-classes"></a>
+<a id="s3.8.3-comments-in-classes"></a>
 <a id="comments-in-classes"></a>
-#### 3.8.4 Classes
+#### 3.8.3 Classes
 
 Classes should have a docstring below the class definition describing the class.
 If your class has public attributes, they should be documented here in an
@@ -1617,8 +1609,8 @@ class SampleClass(object):
 ```
 
 <a id="comments-in-block-and-inline"></a>
-<a id="s3.8.5-comments-in-block-and-inline"></a>
-#### 3.8.5 Block and Inline Comments
+<a id="s3.8.4-comments-in-block-and-inline"></a>
+#### 3.8.4 Block and Inline Comments
 
 The final place to have comments is in tricky parts of the code. If you're going
 to have to explain it at the next [code
@@ -1647,9 +1639,9 @@ knows Python (though not what you're trying to do) better than you do.
 ```
 
 <!-- The next section is copied from the C++ style guide. -->
-<a id="s3.8.6-punctuation-spelling-and-grammar"></a>
+<a id="s3.8.5-punctuation-spelling-and-grammar"></a>
 <a id="punctuation-spelling-and-grammar"></a>
-#### 3.8.6 Punctuation, Spelling and Grammar
+#### 3.8.5 Punctuation, Spelling and Grammar
 
 Pay attention to punctuation, spelling, and grammar; it is easier to read
 well-written comments than badly written ones.
