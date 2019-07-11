@@ -1512,9 +1512,9 @@ A function must have a docstring, unless it meets all of the following criteria:
 -   obvious
 
 A docstring should give enough information to write a call to the function
-without reading the function's code. The docstring should be descriptive
-(`"""Fetches rows from a Bigtable."""`) rather than imperative
-(`"""Fetch rows from a Bigtable."""`). A docstring should describe the
+without reading the function's code. The docstring should be imperative
+(`"""Fetch rows from a Bigtable."""`) rather than descriptive
+(`"""Fetches rows from a Bigtable."""`). A docstring should describe the
 function's calling syntax and its semantics, not its implementation. For tricky
 code, comments alongside the code are more appropriate than using docstrings.
 
