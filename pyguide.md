@@ -1121,7 +1121,7 @@ may reduce your ability to use [Power Features](#power-features).
 <a id="s2.21.4-decision"></a>
 #### 2.21.4 Decision
 
-This highly depends on the complexity of your project. Give it a try.
+Using type annotations is obligatory for functions and class fields. Exceptions can be made when mypy cannot handle some statements correctly (e.g. decorators messing up with types). Try to make annotations as specific as possible by avoiding using `Any` or raw generics (`dict`, `list` etc.).
 
 
 <a id="s3-python-style-rules"></a>
