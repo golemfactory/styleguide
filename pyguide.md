@@ -1149,9 +1149,6 @@ Exceptions:
     inconvenient to split across lines such as URLs or pathnames.
 -   Pylint disable comments. (e.g.: `# pylint: disable=invalid-name`)
 
-Do not use backslash line continuation except for `with` statements requiring
-three or more context managers.
-
 Make use of Python's [implicit line joining inside parentheses, brackets and
 braces](http://docs.python.org/reference/lexical_analysis.html#implicit-line-joining).
 If necessary, you can add an extra pair of parentheses around an expression.
@@ -1183,29 +1180,6 @@ Yes:  # See details at
 No:  # See details at
      # http://www.example.com/us/developer/documentation/api/content/\
      # v2.0/csv_file_name_extension_full_specification.html
-```
-
-It is permissible to use backslash continuation when defining a `with` statement
-whose expressions span three or more lines. For two lines of expressions, use a
-nested `with` statement:
-
-```python
-Yes:  with very_long_first_expression_function() as spam, \
-           very_long_second_expression_function() as beans, \
-           third_thing() as eggs:
-          place_order(eggs, beans, spam, beans)
-```
-
-```python
-No:  with VeryLongFirstExpressionFunction() as spam, \
-          VeryLongSecondExpressionFunction() as beans:
-       PlaceOrder(eggs, beans, spam, beans)
-```
-
-```python
-Yes:  with very_long_first_expression_function() as spam:
-          with very_long_second_expression_function() as beans:
-              place_order(beans, spam)
 ```
 
 Make note of the indentation of the elements in the line continuation examples
