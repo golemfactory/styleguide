@@ -1674,24 +1674,22 @@ including `__new__`, `__init__`, `__delattr__`, `__getattribute__`,
 <a id="strings"></a>
 ### 3.10 Strings
 
-Use the `format` method or the `%` operator for formatting strings, even when
-the parameters are all strings. Use your best judgement to decide between `+`
-and `%` (or `format`) though.
+Use [Literal String Interpolation](https://www.python.org/dev/peps/pep-0498/)
+(a.k.a. f-strings) for string formatting. Avoid using the `format` method or
+the `%` operator. The `+` operator should be used for trivial cases of joining
+strings.
 
 ```python
 Yes: x = a + b
-     x = '%s, %s!' % (imperative, expletive)
-     x = '{}, {}'.format(first, second)
-     x = 'name: %s; score: %d' % (name, n)
-     x = 'name: {}; score: {}'.format(name, n)
-     x = f'name: {name}; score: {n}'  # Python 3.6+
+     x = f'name: {name}; score: {n}'
 ```
 
 ```python
-No: x = '%s%s' % (a, b)  # use + in this case
-    x = '{}{}'.format(a, b)  # use + in this case
+No: x = f'{a}{b}'  # use + in this case
     x = first + ', ' + second
     x = 'name: ' + name + '; score: ' + str(n)
+    x = 'name: %s; score: %d' % (name, n)
+    x = 'name: {}; score: {}'.format(name, n)
 ```
 
 Avoid using the `+` and `+=` operators to accumulate a string within a loop.
