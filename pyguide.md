@@ -1634,11 +1634,23 @@ punctuation, spelling, and grammar help with that goal.
 <a id="classes"></a>
 ### 3.9 Classes
 
-If a class inherits from no other base classes, explicitly inherit from
+If a class inherits from no other base classes, **do not** inherit from
 `object`. This also applies to nested classes.
 
+
 ```python
-Yes: class SampleClass(object):
+Yes: class SampleClass:
+         pass
+
+
+     class OuterClass:
+
+         class InnerClass:
+             pass
+```
+
+```python
+No:  class SampleClass(object):
          pass
 
 
@@ -1653,22 +1665,8 @@ Yes: class SampleClass(object):
 
 ```
 
-```python
-No: class SampleClass:
-        pass
 
-
-    class OuterClass:
-
-        class InnerClass:
-            pass
-```
-
-Inheriting from `object` is needed to make properties work properly in Python 2
-and can protect your code from potential incompatibility with Python 3. It also
-defines special methods that implement the default semantics of objects
-including `__new__`, `__init__`, `__delattr__`, `__getattribute__`,
-`__setattr__`, `__hash__`, `__repr__`, and `__str__`.
+Inheriting from `object` is implicit in Python 3.
 
 <a id="s3.10-strings"></a>
 <a id="strings"></a>
