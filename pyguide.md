@@ -1154,8 +1154,9 @@ braces](http://docs.python.org/reference/lexical_analysis.html#implicit-line-joi
 If necessary, you can add an extra pair of parentheses around an expression.
 
 ```python
-Yes: foo_bar(self, width, height, color='black', design=None, x='foo',
-             emphasis=None, highlight=0)
+Yes: foo_bar(
+         self, width, height, color='black', design=None, x='foo',
+         emphasis=None, highlight=0)
 
      if (width == 0 and height == 0 and
          color == 'red' and emphasis == 'strong'):
@@ -1228,26 +1229,14 @@ No:  if (x):
 Indent your code blocks with *4 spaces*.
 
 Never use tabs or mix tabs and spaces. In cases of implied line continuation,
-you should align wrapped elements either vertically, as per the examples in the
-[line length](#s3.2-line-length) section; or using a hanging indent of 4 spaces,
-in which case there should be nothing after the open parenthesis or bracket on
-the first line.
+you should align wrapped elements using a hanging indent of 4 spaces.
+There should be nothing after the open parenthesis or bracket on the first line.
+
+Avoid using any indentation that is dependent on names of variables, functions,
+etc. because it could easily break during renaming.
 
 ```python
-Yes:   # Aligned with opening delimiter
-       foo = long_function_name(var_one, var_two,
-                                var_three, var_four)
-       meal = (spam,
-               beans)
-
-       # Aligned with opening delimiter in a dictionary
-       foo = {
-           long_dictionary_key: value1 +
-                                value2,
-           ...
-       }
-
-       # 4-space hanging indent; nothing on first line
+Yes:   # 4-space hanging indent; nothing on first line
        foo = long_function_name(
            var_one, var_two, var_three,
            var_four)
@@ -1264,7 +1253,20 @@ Yes:   # Aligned with opening delimiter
 ```
 
 ```python
-No:    # Stuff on first line forbidden
+No:    # Aligned with opening delimiter
+       foo = long_function_name(var_one, var_two,
+                                var_three, var_four)
+       meal = (spam,
+               beans)
+
+       # Aligned with opening delimiter in a dictionary
+       foo = {
+           long_dictionary_key: value1 +
+                                value2,
+           ...
+       }
+       
+       # Stuff on first line forbidden
        foo = long_function_name(var_one, var_two,
            var_three, var_four)
        meal = (spam,
