@@ -13,6 +13,7 @@ style guidelines we use for Golem code. If you are modifying a project that
 originated at Golem, you may be pointed to this page to see the style guides
 that apply to that project.
 
+This project holds the [Python Style Guide][py].
 
 The style guides in this project are licensed under the CC-By 3.0 License,
 which encourages you to share these documents.
@@ -23,4 +24,5 @@ The following Golem style guides live outside of this project:
 
 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
 
+[py]: /pyguide.md
 [log]: https://github.com/golemfactory/golem-internal/wiki/Logging-guidelines
