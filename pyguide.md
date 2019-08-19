@@ -28,7 +28,7 @@ auto-formatter to avoid arguing over formatting.
 <a id="lint"></a>
 ### 2.1 Lint
 
-Run `pylint`, `mypy` and `flake8` over your code. You can not merge your 
+Run `pylint`, `mypy` and `flake8` over your code. You can not merge your
 Pull Request when these checks do not pass.
 
 <a id="s2.1.1-definition"></a>
@@ -1265,7 +1265,7 @@ No:    # Aligned with opening delimiter
                                 value2,
            ...
        }
-       
+
        # Stuff on first line forbidden
        foo = long_function_name(var_one, var_two,
            var_three, var_four)
@@ -1721,15 +1721,15 @@ this.
 ```python
 Yes:
   Python('Why are you hiding your eyes?')
-  Gollum("I'm scared of lint errors.")
+  Creature("I'm scared of lint errors.")
   Narrator('"Good!" thought a happy Python reviewer.')
 ```
 
 ```python
 No:
   Python("Why are you hiding your eyes?")
-  Gollum('The lint. It burns. It burns us.')
-  Gollum("Always the great lint. Watching. Watching.")
+  Creature('The lint. It burns. It burns us.')
+  Creature("Always the great lint. Watching. Watching.")
 ```
 
 Prefer `"""` for multi-line strings rather than `'''`. Projects may choose to
